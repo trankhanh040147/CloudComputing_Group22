@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <link href="{% static 'styles/store.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="container_top">
+            <div class="logo">
+                <a href="{% url 'Home:homepage'%}"><img src="{% static 'images/logo_nhom22.png' %}" alt="logo"></img>
+                </a>
+            </div>
+            <div class="topCenter">
+                <div class="boxSearch">
+                    <table class="elements">
+                        <tr>
+                            <td>
+                                <form action="{% url 'Home:search' %}" class="search" method="GET">
+                                    <input type="text" placeholder="Search..." class="search" name="q" value="{{ q }}">
+                                </form>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <nav>
+                    <div class="menu_top">
+                        <ul>
+                            <li><a href="{% url 'Home:homepage'%}">Trang chủ</a></li>
+                            <li><a href="{% url 'Home:intro'%}">Giới thiệu</a></li>
+                            <li><a href="{% url 'Home:store'%}">Cửa hàng</a></li>
+                            <li><a href="{% url 'Home:contact'%}">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="boxLog">
+                <div class="login log">
+                    <button class="button" style="text-align: center; width: 150px;"><i class="fa-regular fa-user"></i>{{user.username}}</button>
+                </div>
+                <div class="register log">
+                    <button style="text-align: center; width: 150px;">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <a href="{% url 'Home:logout'%}">Đăng xuất</a>
+                    </button>
+                </div>
+            </div>
+            <div class="GioHang">
+                <button onclick="window.location.href='{% url 'cart:cart_detail'%}'" style="cursor:pointer;">
+                    <i class=" fa-solid fa-basket-shopping fa-3x"></i>
+                    <a style = "text-decoration:none;">Giỏ hàng</a>
+                </button>
+            </div>
+        </div>
+    </header>
+    {% block content%}
+    
+    {% endblock %}
+
+    <footer style="height: 50px;">
+        <h5>Copyright © 2022 Thú Nhồi Bông Nhóm 22. Powered by pkt.</h5>
+    </footer>
+</body>

@@ -1,0 +1,39 @@
+ {% extends 'base.html' %} {% block content%} {% load static %}
+<div class="container_center">
+    <div id="left">
+        <div class="menu_left">
+            <h3><i class="fa-solid fa-bars"></i>Danh mục</h3>
+            <ul>
+                {%for c in categories %}
+                <li><a href="{{c.get_absolute_url}}"><i class="fa-solid fa-seedling"></i>{{c.title}}</a></li>
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+    <div id="right">
+        <h1>Danh sách sản phẩm</h1>
+        <div class="products-fill">
+            <ul>
+                {% for product in product_list %}
+                <li>
+                    <a href="{{product.get_url}}" style="text-decoration: none;">
+                        <div class="products">
+                            <div class="picture">
+                                <img src="/home/media/{{product.images}}" alt="">
+                            </div>
+                            <div class="info-pro">
+                                <div class="info">
+                                    <h3> {{product.title}}</h3>
+                                    <p> Price: {{product.price}} {% csrf_token %}</p>
+                                </div>
+                                <button class="bt_add">Add</button>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {% endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+{%endblock%}

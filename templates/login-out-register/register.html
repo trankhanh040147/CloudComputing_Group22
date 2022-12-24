@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí tài khoản</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/register.css'%}" type="text/css">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+    <div class="SignupForm">
+        <div class="wrap-signup">
+            <span class="signup-header">Signup for store</span>
+            <form action='' method='POST'>
+                {% csrf_token %}
+                <p>
+                    <label for="id_username">Tài khoản:</label>
+                    <input type="text" name="username" maxlength="30" required id="id_username">
+                </p>
+                <p>
+                    <label for="id_email">Email:</label>
+                    <input type="email" name="email" required id="id_email">
+                </p>
+                <p>
+                    <label for="id_password1">Mật khẩu:</label>
+                    <input type="password" name="password1" required id="id_password1">  
+                </p>
+                <p>
+                    <label for="id_password2">Nhập lại mật khẩu:</label>
+                    <input type="password" name="password2" required id="id_password2">
+                </p>
+
+                <p>
+                    <label for="id_collocation">Địa chỉ:</label>
+                    <input type="text" name="collocation" maxlength="120" required id="id_collocation"> 
+                </p>
+                <p>
+                    <label for="id_phoneNumber">Số điện thoại:</label>
+                    <input type="text" name="phoneNumber" maxlength="20" required id="id_phoneNumber">
+                </p>
+                <input type="submit",value="Đăng ký ">   
+            </form>
+        </div>
+    </div>
+</body>
+</html>

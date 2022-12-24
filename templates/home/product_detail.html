@@ -1,0 +1,72 @@
+{% extends 'base.html' %} {% block content%}{% load static %}
+<link href="{% static 'styles/product_detail.css'%}" rel="stylesheet" type="text/css">
+<link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+<div class="container">
+
+    <div class="pathProduct">
+        <!-- Đường dẫn web-->
+        <a class="pathPro" href="{% url 'Home:homepage'%}">Trang chủ</a>
+        <i class="fa-solid fa-angle-right ite"></i>
+        <a class="pathPro" href="{% url 'Home:store'%}">Cửa hàng</a>
+        <i class="fa-solid fa-angle-right ite"></i>
+        <a class="pathPro" href="{{category.get_absolute_url}}">{{category.title}}</a>
+        <i class="fa-solid fa-angle-right ite"></i>
+        <span>{{product.title}}</span>
+        <!-- Đường dẫn web-->
+    </div>
+
+    <div class="LeftBlock center">
+        <img src="/home/media/{{product.images}}" alt="">
+    </div>
+
+    <div class="RightBlock">
+        <h3> {{product.title}}</h3>
+        <!-- tieu de san pham -->
+
+        <p class="tokenPro">{% csrf_token %}</p>
+        <!-- gia san pham-->
+
+        <form action="{% url 'cart:cart_add' product.id %}" method="POST">
+            {% csrf_token %} {{ cart_product_form }}
+            <!-- ????-->
+            <input type="submit" value="add to cart" class="btn btn-primary">
+            <!-- nut add san pham vao gio hang-->
+        </form>
+
+        <p class="infoPro"> Thông tin sản phẩm</p>
+        <p class="contentPro">{{product.description}}</p>
+        <!-- thong tin san pham -->
+    </div>
+
+
+    <div class="boxcomment">
+        <hr>
+        <h2>Comment</h2>
+        <br/>
+
+        <div class="comment">
+            <form action="" method="POST">
+                {% csrf_token %} {{cmt}}
+                <button class="bt_com center" type="submit">
+                        POST
+                    </button>
+            </form>
+        </div>
+
+        <br/><br/>
+        <div class="content">
+            {% for com in list_Comments %}
+            <strong>
+                            {{com.user}} - <span>({{ com.date_added }})</span>
+                        </strong>
+            <div class="box">
+                {{com.body}}
+            </div>
+            <br/><br/> {% endfor %}
+        </div>
+        <hr>
+        <br/><br/>
+    </div>
+
+</div>
+{%endblock%}

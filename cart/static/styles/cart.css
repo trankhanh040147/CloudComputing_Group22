@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Noto+Sans:wght@100&display=swap');
+body {
+    background: #E8E8E8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 130px;
+    width: 100%;
+    background: #FFFAFA;
+}
+
+header .container_top {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .container_top .logo {
+    width: 300px;
+}
+
+header .container_top .logo img {
+    float: left;
+    height: 120px;
+    padding-left: 40px;
+}
+
+header .container_top .topCenter {
+    float: left;
+    width: 650px;
+}
+
+header .container_top .topCenter .boxSearch {
+    margin-top: 20px;
+    margin-left: 90px;
+    position: relative;
+    width: 500px;
+    height: 42px;
+    border: 2px solid #00CD00;
+    padding: 0px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+header .container_top .topCenter .boxSearch .elements {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header .container_top .topCenter .boxSearch .elements .search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: "Nunito";
+    color: #424242;
+    font-weight: 500;
+}
+
+header .container_top .topCenter .boxSearch .elements tr td a .fa-magnifying-glass {
+    background: white;
+    color: black;
+}
+
+.search:focus {
+    outline: none;
+}
+
+header .container_top .topCenter nav {
+    height: 40px;
+    padding-top: 20px;
+}
+
+header .container_top .topCenter nav .menu_top ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li {
+    float: left;
+    line-height: 35px;
+    padding: 0 30px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0 1px;
+    border-radius: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .boxLog {
+    float: left;
+    padding-top: 20px;
+}
+
+header .container_top .boxLog .log button {
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    border-radius: 50px;
+}
+
+header .container_top .boxLog .log button i {
+    width: 20px;
+    padding-left: 10px;
+}
+
+header .container_top .boxLog .register {
+    padding-top: 15px;
+}
+
+header .container_top .boxLog .log button:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .GioHang {
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+header .container_top .GioHang button {
+    cursor: pointer;
+    background: #FFF68F;
+    padding: 10px 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #353535;
+    font-family: 'Segoe UI';
+    font-weight: 800;
+}
+
+header .container_top .GioHang button:hover {
+    color: #00CD00;
+    border-color: #FFF68F;
+}
+
+header .container_top .GioHang button i {
+    padding-right: 10px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-center {
+    width: 1200px;
+    /* height: 900px; */
+    margin: auto;
+}
+
+.container-center .Right {
+    width: 1200px;
+}
+
+.container-center .Right .boxR {
+    /* height: 1000px; */
+    background: #fff;
+}
+
+.container-center .Right .boxR h3 {
+    background: #006400;
+    padding: 10px 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.container-center .Right .boxR h3 i {
+    margin-right: 10px;
+}
+
+.container-center .Right .boxR .countItem {
+    padding: 0px 20px 10px 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.container-center .Right .boxR nav {
+    background: #CAE1FF;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Nunito";
+}
+
+.container-center .Right .boxR nav ul {
+    list-style: none;
+}
+
+.container-center .Right .boxR nav ul li {
+    float: left;
+    margin: 10px 70px;
+}
+
+.container-center .Right .boxR .list-products {
+    width: 100%;
+}
+
+.container-center .Right .boxR .list-products .listpro {
+    width: 100%;
+    overflow: auto;
+    /* height: 650px; */
+}
+
+.container-center .Right .boxR .list-products .listpro ol {
+    list-style: none;
+}
+
+.container-center .Right .boxR .list-products .listpro .product {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.product:hover {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+.product li {
+    float: left;
+}
+
+.product img {
+    width: 130px;
+    height: 130px;
+    padding-left: 60px;
+}
+
+.product .tilte-Pro {
+    padding-top: 12px;
+    margin-top: 5px;
+    margin-right: -60px;
+}
+
+.product li #id_quantity {
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+}
+
+.product li #quantity-Pro #pop {
+    width: 30%;
+}
+
+.product li #quantity-Pro #number {
+    width: 40%;
+}
+
+.product li #quantity-Pro #push {
+    width: 30%;
+}
+
+.product .remove-Pro {
+    background: red;
+    color: #fff;
+    width: 18px;
+    text-align: center;
+}
+
+.product .toltal-Pro {
+    margin-left: 40px;
+}
+
+.boxR .total {
+    width: 680px;
+    height: 200px;
+    float: right
+}
+
+.boxR .total p {
+    border-top: ridge;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    font-family: 'sans-serif';
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 180px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.boxR .total .buy {
+    float: right;
+    margin-right: 60px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background: #FFF68F;
+}
+
+.boxR .total .buy:hover {
+    background: #00CD00;
+    color: #000;
+}
+
+footer {
+    clear: both;
+    margin: auto;
+    background: #353535;
+    width: 1200px;
+    height: 50px;
+    max-width: 1200px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer li {
+    float: left;
+    list-style: none;
+    line-height: 20px;
+    font-weight: 5;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* .container-center .Left
+{
+    float: left;
+    width: 520px;
+    min-height: 1000px;
+}
+.container-center .Left .boxL{
+    background: #fff;
+    width: 500px;
+    height:100%;
+}
+.container-center .Left .boxL h3{
+    background: #006400;
+    padding: 10px 10px;
+    color:#fff;
+    font-size: 20px;
+}
+.container-center .Left .boxL h3 i{
+    margin-right: 10px;
+}
+.container-center .Left .boxL .boxInfo
+{
+    margin: 5px 30px;
+    line-height: 2;
+}
+.container-center .Left .boxL .boxInfo h2
+{
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+}
+.container-center .Left .boxL .boxInfo input
+{
+    border:none;
+    border-bottom: 1px solid;
+    width: 400px;
+    height: 100%;
+    font-size: 18px;
+    font-family:"Nunito";
+    color: #424242;
+    font-weight: 500;
+    padding: 5px 0;
+}
+.container-center .Left .boxL .boxInfo input:focus{
+    outline: none;
+}
+.container-center .Left .boxL .boxInfo .name li{
+   float: left;
+   list-style: none;
+   width: 210px;
+
+}
+.container-center .Left .boxL .boxInfo .name li input{
+    width: 190px;
+}
+.container-center .Left .boxL .boxInfo .address
+{
+    clear: left;
+}
+.container-center .Left .boxL .method 
+{
+    margin: 30px 15px;
+    padding: 20px 0;
+    line-height: 20px;
+}
+.container-center .Left .boxL .method h5{
+    padding-left: 15px;
+    color:#EE2C2C ;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Nunito";
+} */

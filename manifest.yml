@@ -1,0 +1,11 @@
+---
+applications:
+- name: Cloud_Computing_Group22
+  routes:
+    - route: ProjectCCGroup22.cfapps.ap21.hana.ondemand.com
+  path: ./
+  memory: 512M
+  buildpack: python_buildpack
+  command: python manage.py runserver --insecure 0.0.0.0:$PORT
+  disk_quota: 1G
+  timeout: 10

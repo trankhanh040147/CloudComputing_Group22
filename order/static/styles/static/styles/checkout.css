@@ -1,0 +1,48 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+.chekoutForm {
+    background-image: url(../images/bannergaubong.jpg);
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrap-checkout {
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 65px 55px 54px;
+}
+
+.checkout-header {
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 39px;
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 49px;
+}

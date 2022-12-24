@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/login.css'%}"/>
+</head>
+<body>
+    <div class="LoginForm">
+        <div class="wrap-login">
+            <span class="login-header">Login for store</span>
+            <form action="" method="POST">
+                {%csrf_token %}
+                {% comment %} {{lf.as_p}} {% endcomment %}
+                {% comment %} Dùng cách dưới để chỉnh Css {% endcomment %}
+                <p><label for="id_username">Username:</label>
+                    <input id="id_username" type="text" name="username" maxlength="100" required></p>
+                <p><label for="id_password">Password:&nbsp</label>
+                    <input id="id_password" type="password" name="password" maxlength="100" required></p>
+                <input id="submit" type="submit" name='submit' value="Đăng nhập"/>
+            </form>
+            <br>
+            <div class="fg_password">
+                <a href="">Forgot password?</a>
+            </div>
+            <a href='../admin'><h2 id="log_for_ad">Login for admin</h2></a>
+            <a href='../register'><h2 id="sign_up">Sign up</h2></a>
+        </div>
+    </div>
+</body>
+</html>

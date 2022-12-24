@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin giao hàng</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}" />
+    <link rel="stylesheet" href="{% static 'styles/checkout.css' %}" type="text/css">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="checkoutForm">
+        <div class="wrap-checkout">
+            <span class="checkout-header">Checkout for Your oder</span>
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>
+                    <label for="id_first_name">First name:</label>
+                    <br>
+                    <input type="text" name="first_name" maxlength="60" required id="id_first_name" placeholder="vd: Hoang">
+                </p> 
+                <p>
+                    <label for="id_last_name">Last name:</label>
+                    <br>
+                    <input type="text" name="last_name" maxlength="60" required id="id_last_name" placeholder="vd: Tran">
+                </p>
+                <p>
+                    <label for="id_email">Email:</label>
+                    <br>
+                    <input type="email" name="email" maxlength="254" required id="id_email" placeholder="vd: nguyenvana@gmail.com">
+                </p>
+                <p>
+                    <label for="id_address">Address:</label>
+                    <br>
+                    <input type="text" name="address" maxlength="150" required id="id_address" placeholder="vd: 01 Dien Bien Phu, Phuong Hai Long, Quan Hai Chau">
+                </p>
+                <p>
+                    <label for="id_postal_code">Postal code:</label>
+                    <br>
+                    <input type="text" name="postal_code" maxlength="30" required id="id_postal_code" placeholder="vd: 550000">
+                </p>
+                <p>
+                    <label for="id_city">City:</label>
+                    <br>
+                    <input type="text" name="city" maxlength="100" required id="id_city" placeholder="vd: Da Nang">
+                </p>
+                <br>
+                <input type="submit" class="btn btn-primary" value="Submit order">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+    

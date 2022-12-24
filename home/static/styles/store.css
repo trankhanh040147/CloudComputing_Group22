@@ -1,0 +1,314 @@
+body {
+    background: #E8E8E8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 130px;
+    width: 100%;
+    background: #FFFAFA;
+}
+
+header .container_top {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .container_top .logo {
+    width: 300px;
+}
+
+header .container_top .logo img {
+    float: left;
+    height: 120px;
+    padding-left: 40px;
+}
+
+header .container_top .topCenter {
+    float: left;
+    width: 650px;
+}
+
+header .container_top .topCenter .boxSearch {
+    margin-top: 20px;
+    margin-left: 90px;
+    position: relative;
+    width: 500px;
+    height: 42px;
+    border: 2px solid #00CD00;
+    padding: 0px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+header .container_top .topCenter .boxSearch .elements {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header .container_top .topCenter .boxSearch .elements .search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: "Nunito";
+    color: #424242;
+    font-weight: 500;
+}
+
+header .container_top .topCenter .boxSearch .elements tr td a .fa-magnifying-glass {
+    background: white;
+    color: black;
+}
+
+.search:focus {
+    outline: none;
+}
+
+header .container_top .topCenter nav {
+    height: 40px;
+    padding-top: 20px;
+}
+
+header .container_top .topCenter nav .menu_top ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li {
+    float: left;
+    line-height: 35px;
+    padding: 0 30px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0 1px;
+    border-radius: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .boxLog {
+    float: left;
+    padding-top: 20px;
+}
+
+header .container_top .boxLog .log button {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.boxLog .log button a {
+    text-decoration: none;
+}
+
+header .container_top .boxLog .log button i {
+    width: 20px;
+    padding-left: 10px;
+}
+
+header .container_top .boxLog .register {
+    padding-top: 15px;
+}
+
+header .container_top .boxLog .log button:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .GioHang {
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+header .container_top .GioHang button {
+    background: #FFF68F;
+    padding: 10px 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #353535;
+    font-family: 'Segoe UI';
+    font-weight: 800;
+}
+
+header .container_top .GioHang button:hover {
+    color: #00CD00;
+    border-color: #FFF68F;
+}
+
+header .container_top .GioHang button i {
+    padding-right: 10px;
+}
+
+.container_center {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container_center #left {
+    float: left;
+    width: 180px;
+    min-height: 300px;
+    background: #FFFAFA;
+    margin-right: 20px
+}
+
+.container_center #left .menu_left ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container_center #left .menu_left ul li {
+    list-style: none;
+}
+
+.container_center #left .menu_left ul li a {
+    display: block;
+    text-decoration: none;
+    line-height: 45px;
+    height: 40px;
+    text-indent: 15px;
+    color: #353535;
+    font-size: 14px;
+}
+
+.container_center #left .menu_left ul li a:hover {
+    color: #00CD00;
+}
+
+.container_center #left .menu_left ul li a i {
+    width: 40px;
+}
+
+.container_center #left .menu_left h3 {
+    background: #353535;
+    height: 50px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.container_center #left .menu_left h3 i {
+    padding-right: 15px;
+}
+
+.container_center #right {
+    float: left;
+    max-width: 1000px;
+    min-height: 500px;
+    background: azure;
+}
+
+.container_center #right h1 {
+    background: #353535;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.container_center #right ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container_center #right ul li {
+    float: left;
+}
+
+.container_center #right .products {
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #E2E9ED;
+    padding: 30px 5px;
+    position: relative;
+    transition: 0.2s all;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.container_center #right .products:hover {
+    color: #00CD00;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.container_center #right .products .picture {
+    width: 300px;
+    height: 200px;
+    background: #fff;
+}
+
+.container_center #right .products .picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+.container_center #right .products .info-pro {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.container_center #right .products .info-pro .info {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+
+.container_center #right .products .info-pro .info h3 {
+    width: 100%;
+    height: 30px;
+}
+
+.container_center #right .products .info-pro button {
+    background: #fff;
+    position: relative;
+    right: 10px;
+    top: 20px;
+    padding: 5px 5px;
+}
+
+.container_center #right .products .info-pro button:hover {
+    background: #FFF68F;
+}
+
+footer {
+    margin: auto;
+    background: #353535;
+    width: 100%;
+    height: 50px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}

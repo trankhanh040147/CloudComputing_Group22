@@ -1,0 +1,207 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}" />
+    <link href="{% static 'styles/cart.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="container_top">
+            <div class="logo">
+                <a href="{% url 'Home:homepage'%}"><img src="{% static 'images/logo_nhom22.png' %}" alt="logo"></img>
+                </a>
+            </div>
+            <div class="topCenter">
+                <div class="boxSearch">
+                    <table class="elements">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Search..." class="search">
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <nav>
+                    <div class="menu_top">
+                        <ul>
+                            <li><a href="{% url 'Home:homepage'%}">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="{% url 'Home:store'%}">Cửa hàng</a></li>
+                            <li><a href="{% url 'Home:contact'%}">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="boxLog">
+                <div class="login log">
+                    <button class="button" style="text-align: center;width: 150px;"><i class="fa-regular fa-user"></i>{{user.username}}</button>
+                </div>
+                <div class="register log">
+                    <button style="text-align: center; width: 150px;">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <a href="{% url 'Home:logout'%}" style="text-decoration: none;">Đăng xuất</a>
+                    </button>
+                </div>
+            </div>
+            <div class="GioHang">
+                <button><i class=" fa-solid fa-basket-shopping fa-3x"></i>Giỏ hàng</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-center">
+        <div class="Right">
+            <div class="boxR">
+                <h3><i class="fa-solid fa-cart-arrow-down" style="font-size:30px;"></i>Chi tiết đơn hàng</h3>
+                <div class="countItem" style="height: 100px;">
+                    {% with totail_items=cart|length %} {% if cart|length > 0 %}
+                    <div>
+                        <p style="font-size:26px;">Thông tin đơn hàng:</p>
+                        <p style="font-size:22px;margin-left:100px;">Số lượng sản phẩm: {{ totail_items }}</p>
+                        <p style="font-size:22px;margin-left:175px;">Thành tiền: {{ cart.get_total_price }} VND</a>
+                        </p>
+                    </div>
+                    {% else %} Chưa có sản phẩm nào {% endif %} {% endwith %}
+                </div>
+                <nav>
+                    <ul>
+                        <li>Tên sản phẩm</li>
+                        <li>Số lượng</li>
+                        <li>Đơn giá</li>
+                        <li>Thành tiền</li>
+                        <li>Xóa sản phẩm</li>
+                    </ul>
+                </nav>
+                <div class="list-products">
+                    <div class="listpro">
+                        <ol>
+                            {% for item in cart %} {% with product=item.product %}
+                            <div class="product">
+                                <li>
+                                    <img src="/home/media/{{product.images}}" alt="" width="100" height="100"></img>
+                                    <p class="tilte-Pro">{{ product.title }}</p>
+                                </li>
+                                <li>
+                                    <form action="{% url 'cart:cart_add' product.id %}" method="post" style="margin-left: 150px;">
+                                        {% csrf_token %} {{ item.update_quantity_form.quantity }} {{ item.update_quantity_form.update }}
+                                        <li>
+                                            <input type="submit" value="Update" class="btn btn-info" style="font-size:15px;">
+                                        </li>
+                                    </form>
+
+                                </li>
+                                <li>
+                                    <div class="unit-Pro" style="margin-left: 140px;font-size:20px;">
+                                        <p> {{ item.price }} VND</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="toltal-Pro" style="margin-left: 120px;font-size:20px;">
+                                        <p>{{ item.total_price }} VND</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{% url 'cart:cart_remove' product.id %}" style="margin-left: 150px;font-size:20px;text-decoration: none;">Delete</a>
+                                </li>
+                            </div>
+                            {% endwith %} {%endfor%}
+                        </ol>
+                    </div>
+                </div>
+                <div class="total" style="padding-bottom: 115px;">
+                    <p>Đơn mua: {{ cart.get_total_price }} VND</p>
+                    <button class="buy">
+                        <a href="{% url 'orders:order_create' %}" style="text-decoration:none; font-size:20px;">Thanh toán</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="center">
+        <li>
+            <h5>Copyright © 2022 Thú Nhồi Bông Nhóm 22. Powered by pkt.</h5>
+        </li>
+    </footer>
+</body>
+
+</html>
+
+{% comment %}
+<div class="container">
+    <div class="row" style="margin-top: 6%">
+        <h2>Your Shopping Cart
+            <span class="badge pull-right">
+            {% with totail_items=cart|length %}
+                {% if cart|length > 0 %}
+                    My Shopping Order:
+                    <a href="{% url "cart:cart_detail" %}" style="color: #000">
+                        {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                    </a>
+                    {% else %}
+                        Your cart is empty.
+                {% endif %}
+            {% endwith %}
+            </span>
+        </h2>
+        <table class="table table-striped table-hover">
+            <thead style="background-color: #5AC8FA">
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                    <th>Unit Price</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart %} {% with product=item.product %}
+                <tr>
+                    <td>
+                        <a href="{{ product.get_url }}">
+                            <img src="/home/media/{{product.images}}" alt="..." style="height: 130px; width: auto">
+                        </a>
+                    </td>
+                    <td>{{ product.title }}</td>
+                    <td>
+                        <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                            {% csrf_token %} {{ item.update_quantity_form.quantity }} {{ item.update_quantity_form.update }}
+                            <input type="submit" value="Update" class="btn btn-info">
+                        </form>
+                    </td>
+                    <td>
+                        <a href="{% url 'cart:cart_remove' product.id %}">Remove</a>
+                    </td>
+                    <td>kshs. {{ item.price }}</td>
+                    <td>kshs. {{ item.total_price }}</td>
+                </tr>
+                {% endwith %} {% endfor %}
+                <tr style="background-color: #5AC8FA">
+                    <td><b>Total</b></td>
+                    <td colspan="4"></td>
+                    <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-right">
+            <a href="/store/" class="btn btn-default ">Continue Shopping</a>
+            <a href="" class="btn btn-primary">Checkout</a>
+        </p>
+    </div>
+</div> {% endcomment %}

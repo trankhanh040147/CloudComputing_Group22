@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+body {
+    background: #E8E8E8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 130px;
+    width: 100%;
+    background: #FFFAFA;
+}
+
+header .container_top {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .container_top .logo {
+    width: 300px;
+}
+
+header .container_top .logo img {
+    float: left;
+    height: 120px;
+    padding-left: 40px;
+}
+
+header .container_top .topCenter {
+    float: left;
+    width: 650px;
+}
+
+header .container_top .topCenter .boxSearch {
+    margin-top: 20px;
+    margin-left: 90px;
+    position: relative;
+    width: 500px;
+    height: 42px;
+    border: 2px solid #00CD00;
+    padding: 0px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+header .container_top .topCenter .boxSearch .elements {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header .container_top .topCenter .boxSearch .elements .search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: "Nunito";
+    color: #424242;
+    font-weight: 500;
+}
+
+header .container_top .topCenter .boxSearch .elements tr td a .fa-magnifying-glass {
+    background: white;
+    color: black;
+}
+
+.search:focus {
+    outline: none;
+}
+
+header .container_top .topCenter nav {
+    height: 40px;
+    padding-top: 20px;
+}
+
+header .container_top .topCenter nav .menu_top ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li {
+    float: left;
+    line-height: 35px;
+    padding: 0 30px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0 1px;
+    border-radius: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .boxLog {
+    float: left;
+    padding-top: 20px;
+}
+
+header .container_top .boxLog .log button {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+header .container_top .boxLog a {
+    text-decoration: none;
+}
+
+header .container_top .boxLog .log button i {
+    width: 20px;
+    padding-left: 10px;
+}
+
+header .container_top .boxLog .register {
+    padding-top: 15px;
+}
+
+header .container_top .boxLog .log button:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .GioHang {
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+header .container_top .GioHang button {
+    background: #FFF68F;
+    padding: 10px 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #353535;
+    font-family: 'Segoe UI';
+    font-weight: 800;
+}
+
+header .container_top .GioHang button:hover {
+    color: #00CD00;
+    border-color: #FFF68F;
+}
+
+header .container_top .GioHang button i {
+    padding-right: 10px;
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/bannergaubong.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50%;
+}
+
+.banner .effect {
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none;
+    background-image: url("../images/effect-banner1.png"), url("../images/effect-banner2.png");
+    animation: sparkle 60s linear infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, -300px -300px
+    }
+}
+
+.banner .effect {
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .effect li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.banner .effect li h2 {
+    font-size: 40px;
+    font-weight: 10px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 0px;
+    letter-spacing: 2px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    animation: text 3s 1;
+}
+
+@keyframes text {
+    0% {
+        color: #00CD00;
+        margin-bottom: -40px;
+    }
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+.container_center {
+    width: 1200px;
+    margin: 0 auto;
+    /* padding-bottom: 80px; */
+    background-color: #353535;
+}
+
+.menu_container {
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 0 0 30px;
+}
+
+.menu_bar {
+    position: relative;
+    display: flex;
+    height: auto;
+    margin: auto;
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px;
+    max-width: 1500px;
+}
+
+.bar_item {
+    flex: 1;
+    height: 100%;
+    background-color: #FFFF;
+    display: inline-block;
+    padding: 10px 15px 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bar_item:hover {
+    border: 5px solid #8CC63F;
+    color: #8CC63F;
+}
+
+.discount {
+    width: 100%;
+    margin-bottom: -50px;
+}
+
+.discount_menu {
+    width: 100%;
+    max-width: 1200px;
+    height: 450px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.discount_item {
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: 10px 15px 30px;
+    box-sizing: content-box;
+    background-size: 100%;
+    transform: scale(0.96);
+    transition: .5s ease-in-out;
+}
+
+.discount_item:first-child {
+    margin-left: 0;
+}
+
+.discount_item:last-child {
+    margin-right: 0;
+}
+
+.discount_item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.item1 {
+    background-image: url("../images/giam_gia1.jpg");
+}
+
+.item2 {
+    background-image: url("../images/giam_gia2.jpg");
+}
+
+.hotsale_container {
+    width: 100%;
+    height: auto;
+}
+
+.menu_hotsale {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+}
+
+.content {
+    font-size: 150%;
+    color: #1c1c1c;
+    font-family: "Oswald", sans-serif;
+    font-size: 40.8px;
+    line-height: 1.6;
+    font-weight: bold;
+    margin: 0 0 14px;
+}
+
+.hotsale_slide {
+    display: flex;
+}
+
+.hot_item {
+    width: 300px;
+    padding: 10px 5px 10px 5px;
+    background: #ccc;
+}
+
+.hot_item img {
+    width: 250px;
+    height: 250px;
+    padding-top: 15px;
+}
+
+.support-text {
+    background: #fff;
+    height: 500px;
+    width: 1200px;
+    margin: auto;
+}
+
+footer {
+    margin: auto;
+    background: #353535;
+    width: 100%;
+    height: 50px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}

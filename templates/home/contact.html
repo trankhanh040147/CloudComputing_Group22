@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}">
+    <link href="{% static 'styles/cart.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="container_top">
+            <div class="logo">
+                <a href="{% url 'Home:homepage'%}"><img src="{% static 'images/logo_nhom22.png' %}" alt="logo"></img>
+                </a>
+            </div>
+            <div class="topCenter">
+                <div class="boxSearch">
+                    <table class="elements">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Search..." class="search">
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <nav>
+                    <div class="menu_top">
+                        <ul>
+                            <li><a href="{% url 'Home:homepage'%}">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="{% url 'Home:store'%}">Cửa hàng</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="boxLog">
+                <div class="login log">
+                    <button class="button" style="text-align: center;width: 150px;"><i class="fa-regular fa-user"></i>{{user.username}}</button>
+                </div>
+                <div class="register log">
+                    <button style="text-align: center; width: 150px;">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <a href="{% url 'Home:logout'%}" style="text-decoration: none;">Đăng xuất</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row" style="height:533px;background-color:#fff;font-size:28px">
+            <div class="col-md-8 col-md-offset-2" style="padding-top:20px;">
+                <div class="support-text " style="height:460px;background-color:rgba(100, 100, 100, 0.3);padding-left:200px">
+                    {% comment %} <div style="font-size: 40px;text-align: center;height:50px;background-color: #fff;color:#EE82EE;padding-top:10px">
+                        CONTACT
+                    </div> {% endcomment %}
+                    <div class="footer-distributed" style="padding-left:30px;font-size: 28px;">
+                        <div class="footer-left">
+                            <img src="{% static 'images/logo_nhom22.png' %}" alt="logo" style="width:80px;height:80px;">
+                        </div>
+                        <div class="footer-center">
+                            <div>
+                                <p>
+                                    <i class="fa fa-map-marker"></i>
+                                    <span>01 Võ Văn Ngân, Phường Linh Chiểu, Thành phố Thủ Đức, Thành phố Hồ Chí Minh
+                                </p>
+                                <br>
+                            </div>
+                            <div>
+                                <p>
+                                    <i class="fa fa-phone"></i>
+                                    0865330769
+                                </p>
+                            </div>
+                            <br>
+                            <div>
+                                <p>
+                                    <i class="fa fa-envelope"></i>
+                                    <a href="20110701@student.hcmute.edu.vn" style="text-decoration:none;">20110701@student.hcmute.edu.vn</a>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="footer-right">
+                            <p class="footer-company-about">
+                                <span>Về nhóm 22, Mời các bạn liên hệ thông qua các kênh sau:</span>
+                            </p>
+                            <div class="footer-icons" style="padding-top:20px;padding-left: 480px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087164146540" style="padding-right:15px;"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://github.com/arapsing"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h5>Copyright © 2022 Thú Nhồi Bông Nhóm 22. Powered by pkt.</h5>
+    </footer>
+</body>
+
+</html>

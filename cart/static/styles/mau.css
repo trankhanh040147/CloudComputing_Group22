@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+body{
+    background: #E8E8E8;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 130px;
+    width: 100%;
+    background: #FFFAFA;
+}
+header .container_top{
+    width: 1200px;
+    margin: 0 auto;
+}
+header .container_top .logo{
+    width: 300px;
+}
+header .container_top .logo img{
+    float: left;
+    height: 120px;
+    padding-left: 40px;
+}
+
+
+header .container_top .topCenter{
+    float: left;
+    width: 650px;
+}
+header .container_top .topCenter .boxSearch{
+    margin-top: 20px;
+    margin-left: 90px;
+    position: relative;
+    width: 500px;
+    height: 42px;
+    border: 2px solid #00CD00;
+    padding: 0px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+header .container_top .topCenter .boxSearch .elements{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+header .container_top .topCenter .boxSearch .elements .search{
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family:"Nunito";
+    color: #424242;
+    font-weight: 500;
+}
+header .container_top .topCenter .boxSearch .elements tr td a .fa-magnifying-glass{
+    background: white;
+    color: black;
+}
+.search:focus{
+    outline: none;
+}
+header .container_top .topCenter nav{
+    height: 40px;
+    padding-top: 20px;
+}
+header .container_top .topCenter nav .menu_top ul{
+    list-style: none;
+    margin-left: 10px;
+}
+header .container_top .topCenter nav .menu_top ul li{
+    float: left;
+    line-height: 35px;
+    padding: 0 30px;
+}
+header .container_top .topCenter nav .menu_top ul li a{
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0 1px;
+    border-radius: 10px;
+}
+header .container_top .topCenter nav .menu_top ul li a:hover{
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .boxLog{
+    float: left;
+    padding-top: 20px;
+}
+header .container_top .boxLog .log button{
+    width: 110px;
+    height: 30px;
+    text-align: left;
+    border-radius: 50px;
+}
+header .container_top .boxLog .log button i{
+    width: 20px;
+    padding-left: 10px;
+}
+header .container_top .boxLog .register{
+    padding-top: 15px;
+}
+header .container_top .boxLog .log button:hover{
+    background: #00CD00;
+    color: #fff;
+}
+header .container_top .GioHang{
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+header .container_top .GioHang button{
+    background: #FFF68F;
+    padding: 10px 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #353535;
+    font-family:'Segoe UI';
+    font-weight: 800;
+}
+header .container_top .GioHang button:hover{
+    color: #00CD00;
+    border-color: #FFF68F;
+}
+header .container_top .GioHang button i{
+    padding-right: 10px;
+}
+
+footer{
+    margin: auto;
+    background: #353535;
+    width: 1200px;
+    height: 100px;
+    max-width: 1200px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer li{
+    float: left;
+    list-style: none;
+    line-height:20px;
+    font-weight: 5;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 100px;
+}

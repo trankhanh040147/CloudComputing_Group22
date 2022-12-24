@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+body {
+    background: #E8E8E8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 130px;
+    width: 100%;
+    background: #FFFAFA;
+}
+
+header .container_top {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .container_top .logo {
+    width: 300px;
+}
+
+header .container_top .logo img {
+    float: left;
+    height: 120px;
+    padding-left: 40px;
+}
+
+header .container_top .topCenter {
+    float: left;
+    width: 650px;
+}
+
+header .container_top .topCenter .boxSearch {
+    margin-top: 20px;
+    margin-left: 90px;
+    position: relative;
+    width: 500px;
+    height: 42px;
+    border: 2px solid #00CD00;
+    padding: 0px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+header .container_top .topCenter .boxSearch .elements {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header .container_top .topCenter .boxSearch .elements .search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: "Nunito";
+    color: #424242;
+    font-weight: 500;
+}
+
+header .container_top .topCenter .boxSearch .elements tr td a .fa-magnifying-glass {
+    background: white;
+    color: black;
+}
+
+.search:focus {
+    outline: none;
+}
+
+header .container_top .topCenter nav {
+    height: 40px;
+    padding-top: 20px;
+}
+
+header .container_top .topCenter nav .menu_top ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li {
+    float: left;
+    line-height: 35px;
+    padding: 0 30px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0 1px;
+    border-radius: 10px;
+}
+
+header .container_top .topCenter nav .menu_top ul li a:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .boxLog {
+    float: left;
+    padding-top: 20px;
+}
+
+header .container_top .boxLog .log button {
+    width: 110px;
+    height: 30px;
+    text-align: left;
+    border-radius: 50px;
+}
+
+header .container_top .boxLog .log button i {
+    width: 20px;
+    padding-left: 10px;
+}
+
+header .container_top .boxLog .register {
+    padding-top: 15px;
+}
+
+header .container_top .boxLog .log button:hover {
+    background: #00CD00;
+    color: #fff;
+}
+
+header .container_top .GioHang {
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+header .container_top .GioHang button {
+    background: #FFF68F;
+    padding: 10px 10px;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #353535;
+    font-family: 'Segoe UI';
+    font-weight: 800;
+}
+
+header .container_top .GioHang button:hover {
+    color: #00CD00;
+    border-color: #FFF68F;
+}
+
+header .container_top .GioHang button i {
+    padding-right: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBanner {
+    width: 100%;
+    height: 160px;
+    background-image: url(../images/banner-info.png);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50%;
+}
+
+.containerBanner .box {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.containerBanner .box .text {
+    list-style: none;
+    line-height: 50px;
+    color: #fff;
+    font-family: cursive;
+    font-size: 20px;
+    opacity: 0.88;
+}
+
+#container-center {
+    width: 1200px;
+    height: 700px;
+    background: #FFF68F;
+    margin: auto;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#container-center .box-info {
+    width: 100%;
+    height: 100px;
+    font-size: 20px;
+}
+
+#container-center .boxtext {
+    padding: 30px 60px;
+    text-indent: 100px;
+    font-size: 19px;
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+#container-center .line {
+    margin: auto;
+    width: 500px;
+    height: 30px;
+    display: block;
+    border-top: 3px solid #353535;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#container-center .listfriend {
+    background: #FFF68F;
+    height: 300px;
+    width: 100%;
+    display: block;
+    padding-top: 15px;
+}
+
+#container-center .listfriend h3 {
+    text-indent: 80px;
+    font-size: 20px;
+}
+
+#container-center .listfriend .list .boxfriend {
+    /* background-color: #fff;
+    box-shadow: 0 0 0 1px #E2E9ED; */
+    padding: 30px;
+    position: relative;
+    z-index: 0;
+    transition: 0.2s all;
+    margin: 30px 10px;
+    width: 180px;
+    height: 150px;
+}
+
+#container-center .listfriend .list .boxfriend:hover {
+    z-index: 1;
+    box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+#container-center .listfriend .list .boxfriend:hover img {
+    transform: scale(1.7);
+    z-index: -1;
+    transition: 1s;
+}
+
+#container-center .listfriend .list .boxfriend .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+#container-center .listfriend .list .boxfriend .box_content {
+    margin: 10px 0;
+}
+
+#container-center .listfriend .list .boxfriend .box_content .title {
+    color: #313435;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4rem;
+    margin: 0;
+    text-indent: 0px;
+    text-align: center;
+}
+
+footer {
+    margin: auto;
+    background: #353535;
+    width: 1200px;
+    height: 100px;
+    max-width: 1200px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer li {
+    float: left;
+    list-style: none;
+    line-height: 20px;
+    font-weight: 5;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 100px;
+}
